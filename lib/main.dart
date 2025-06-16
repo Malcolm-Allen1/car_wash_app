@@ -12,30 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Car Wash',
       theme: ThemeData(
-       
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
- class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'hello WOrld',
-      theme: ThemeData(primaryColor: Colors.red),
-      initialRoute: AppRoutes.intro,
       routes: AppRoutes.routes,
-     
-       
-      
+      initialRoute: AppRoutes.mainlayout,
     );
-    
   }
 }
-

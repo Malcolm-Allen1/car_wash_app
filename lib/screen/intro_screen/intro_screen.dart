@@ -6,15 +6,14 @@ class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Stack(
+      body: Stack(
         children: [
-          // SizedBox.expand(child: Image.asset(''),),
-         Container(
-          color: Colors.blue,
-         )
-    ]
-    ),
+          Container(
+            color: Colors.blue,
+            child: Image.asset("assets/intro_image1.jpg"),
+          ),
+        ],
+      ),
     );
-        
   }
 }
