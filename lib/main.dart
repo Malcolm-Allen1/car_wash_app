@@ -1,3 +1,4 @@
+import 'package:car_wash_app/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,11 +26,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('welcome to the app'),
-      ),
+    return MaterialApp(
+      title: 'hello WOrld',
+      theme: ThemeData(primaryColor: Colors.red),
+      initialRoute: AppRoutes.intro,
+      routes: AppRoutes.routes,
+     
+       
+      
     );
+    
   }
 }
 
