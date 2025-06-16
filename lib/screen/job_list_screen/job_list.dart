@@ -1,3 +1,4 @@
+import 'package:car_wash_app/temp_database/temp_database.dart';
 import 'package:flutter/material.dart';
 
 class JobList extends StatefulWidget {
@@ -25,7 +26,39 @@ class _JobListState extends State<JobList> {
           ),
         ),
         body: TabBarView(
-          children: [Text("data 1"), Text("Data 2"), Text("Data 3")],
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: customerDetails.length,
+                itemBuilder: (context, index) {
+                  final details = customerDetails[index];
+                  return Container(
+                    margin: EdgeInsets.only(bottom: 5),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Image.asset(
+                            "assets/${details['vehicleimg']}",
+                            height: 160,
+                            width: 250,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Expanded(child: Text(details['name'])),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+            Text("Data 2"),
+            Text("Data 3"),
+          ],
         ),
       ),
     );
